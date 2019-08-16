@@ -1,4 +1,5 @@
-var cards = document.getElementsByClassName("EventCard")[0];
+var app = document.getElementById('app');
+var cards = document.getElementsByClassName("EventCard");
 var items = [
     {
     "title": "accord",
@@ -32,17 +33,19 @@ for(var i = 0; i < items.length; i++) {
     var CardTime = document.createElement("p");//
     var CardLocation = document.createElement("p");//
     var Link = document.createElement("a");//
+    console.log(Link)
 
     CardTitle.innerHTML = items[i].title;
     CardDescription.innerHTML = items[i].description;
-    CardTime.innerHTML = items[i].timedate;
+    CardTime.innerHTML = items[i].timeDate;
     CardLocation.innerHTML = items[i].location;
     Link.innerHTML = items[i].link;
     
-    cards.appendChild(CardTitle);
-    cards.appendChild(CardDescription);
-    cards.appendChild(CardTime);
-    cards.appendChild(CardLocation);
-    cards.appendChild(Link);
-
+    
+    divCard.appendChild(CardTitle);
+    divCard.appendChild(CardDescription);
+    divCard.appendChild(CardTime);
+    divCard.appendChild(CardLocation);
+    divCard.appendChild(Link);
+    app.appendChild(divCard);
 }
