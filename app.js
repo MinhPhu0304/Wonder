@@ -1,11 +1,13 @@
 const Express = require('express');
 const path = require('path')
+const cors = require('cors')
 const { requestToMeetUpApi } = require('./meetup.controller.js')
 const bodyParser = require('body-parser')
 require('dotenv').config()
 const port = process.env.PORT || 3000;
 
 const app = Express();
+app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(Express.static('/'))
@@ -16,6 +18,8 @@ app.get('/', function (req, res) {
 
 app.get('/api/events', async (req, res) => {
     const data = await requestToMeetUpApi()
+
+    data = [...dataMeetup, ...eventBritedata]
     res.json(data)
 })
 
