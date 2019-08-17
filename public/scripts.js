@@ -4,17 +4,46 @@ var items = [{}]
 var isModalOpen= false;
 
 async function getItems(){
-    let items
     var response = await fetch("http://localhost:3000/api/events")
                         // .then(res => return res.json())
                         // .then(data => { console.log(data)})
                         // .catch(err => console.log(err));
     items = await response.json();
     console.log(items)
+    for(var i = 0; i < items.length; i++) {
+        var divCard = document.createElement("div");
+        divCard.className = 'EventCard';
+        divCard.onclick = () => openModal;
+    
+        var CardTime = document.createElement("p");
+        CardTime.className = 'EventTimeDate';
+    
+        var CardLocation = document.createElement("p");
+
+        var CardTitle = document.createElement("h1");
+        CardTitle.className = 'EventTitle';
+
+        var CardBody = document.createElement("div");
+        CardBody.className = 'EventBody';
+
+        var CardDescription= document.createElement("p");//
+        CardDescription.className = 'EventDescription';
+
+        CardTitle.innerHTML = items[i].name;
+        CardDescription.innerHTML = items[i].bio;
+        CardTime.innerHTML = items[i].time;
+        CardLocation.innerHTML = items[i].address;
+    
+        divCard.appendChild(CardTime);
+        divCard.appendChild(CardTitle);
+        divCard.appendChild(CardDescription);
+        
+        divCard.appendChild(CardLocation);
+        app.appendChild(divCard);
+    }
 }
 
 window.onload = getItems();
-
 
 function openModal(index){
 isModalOpen = true;
@@ -26,53 +55,18 @@ var ModalEventPage = document.createElement("button");
 ModalTitle.innerHTML = items[index].link;
 
 }
-for(var index = 0; index < items.length; index++) {
 
-    var divCard = document.createElement("div");
-    divCard.className = 'EventCard';
-    //divCard.onclick = () => openModal(i);
+var isModalOpen= false;
 
-    var CardTime = document.createElement("p");//
-    CardTime.className = 'EventTimeDate';
-
-    var CardLocation = document.createElement("p");//
-
-        var CardTitle = document.createElement("h1");//
-        CardTitle.className = 'EventTitle';
-
-        var CardBody = document.createElement("div");
-        CardBody.className = 'EventBody';
-
-            var CardDescription= document.createElement("p");//
-            CardDescription.className = 'EventDescription';
-
-            
-
-
-    //var Link = document.createElement("button");//
-    //var testString = items[i].link;
-    //Link.href = items[i].link;
-    //Link.onclick = () => window.location.href = (testString);
-    //console.log(testString);
-    //Link.innerHTML = "Go to event page!";
-
-    //var LinkText = document.createElement("p");
-    //LinkText = "Go to event page!";
-    //console.log(Link)
-
-    CardTitle.innerHTML = items[index].title;
-    CardDescription.innerHTML = items[index].description;
-    CardTime.innerHTML = items[index].timeDate;
-    CardLocation.innerHTML = items[index].location;
-    //Link.innerHTML = items[i].link;
+function openModal(index){
+    isModalOpen = true;
     
-    divCard.appendChild(CardTime);
-    divCard.appendChild(CardTitle);
-    divCard.appendChild(CardDescription);
+    var ModalTitle = document.createElement("h1");
+    ModalTitle.innerHTML = items[index].title;
     
-    divCard.appendChild(CardLocation);
-    //divCard.appendChild(Link);
-
-    //Link.appendChild(LinkText);
-    app.appendChild(divCard);
+    var ModalEventPage = document.createElement("button");
+    ModalEventPage.innerHTML = items[index].link;
+    
+    var ModalDescription = document.createElement("p");
+    ModalDescription.innerHTML = items[index].description;
 }
