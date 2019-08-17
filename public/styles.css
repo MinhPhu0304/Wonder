@@ -57,7 +57,7 @@ h2 {
 }
 
 .EventCard:hover {
-    box-shadow: 1px 1px 24px #3500A6;
+    box-shadow: 2px 2px 24px #9868FF;
     transition: all 0.3s;
     transform: translateY(2px) translateX(2px);
 }
@@ -68,7 +68,7 @@ h2 {
 }
 
 .EventTitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin: 1rem 0;
     overflow: hidden;
@@ -126,6 +126,19 @@ button {
         width: calc(100vw - 2rem);
         margin: 2rem auto 5rem auto;
     }
+
+    .SearchContainer {
+        height:5rem;
+        width: calc(100vw - 2rem);
+
+    }
+    
+    .uk-search-input {
+        height: 5rem;
+        width: calc(100vw - 2rem);
+    }
+    
+
     }
 
 
@@ -141,6 +154,17 @@ button {
             display: block;
             width: calc(100vw - 2rem);
             margin: 2rem auto 5rem auto;
+        }
+
+        .SearchContainer {
+            height:5rem;
+            width: calc(100vw - 2rem);
+    
+        }
+        
+        .uk-search-input {
+            height: 5rem;
+            width: calc(100vw - 2rem);
         }
         }
         
