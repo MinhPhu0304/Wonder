@@ -4,7 +4,7 @@ var items = [
     {
     "title": "accord",
     "description": "focus",
-    "timeDate": "accord",
+    "timeDate": "12 jan",
     "location": "focus",
     "link": "google.com"
     },
@@ -43,10 +43,10 @@ for(var i = 0; i < items.length; i++) {
     CardLocation.innerHTML = items[i].location;
     Link.innerHTML = items[i].link;
     
-    
+    divCard.appendChild(CardTime);
     divCard.appendChild(CardTitle);
     divCard.appendChild(CardDescription);
-    divCard.appendChild(CardTime);
+    
     divCard.appendChild(CardLocation);
     divCard.appendChild(Link);
     app.appendChild(divCard);

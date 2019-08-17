@@ -2,12 +2,26 @@
 
 }*/
 
+html{
+    background-color: lightpink;
+}
 h1 {
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 72px;
 }
 
+#app{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 20rem 20rem 20rem;
+    margin: 0 auto;
+    width: 64rem;
+}
+
 .EventCard {
     font-family: "Comic Sans MS", cursive, sans-serif;
-    border: solid;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 1px 1px 20px #333;
+
 }
