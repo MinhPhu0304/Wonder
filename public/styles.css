@@ -8,6 +8,8 @@ html {
     margin: auto;
     margin-top: 4rem;
     color: #fff;
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
 }
 
 #heading {
@@ -73,7 +75,7 @@ h2 {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     /* number of lines to show */
 }
 
@@ -94,3 +96,51 @@ button {
     color: white;
 }
 
+.SearchContainer {
+    height:5rem;
+    width: 80rem;
+    background: white;
+    border-radius: 12px;
+    margin: 0rem auto 5rem auto;
+    box-shadow: 1px 1px 20px #5100FF;
+    border: 5px black solid;
+}
+
+.uk-search-input {
+    height: 5rem;
+    width: 66rem;
+}
+
+
+@media (min-width: 401px) and (max-width: 1280px) { 
+    /* Device: Laptops, Desktops  #Screen: 1025px to 1280px */
+    #app {
+        display: grid;
+        gap: 2.5rem;
+        grid-template-columns: repeat(auto-fill, 25rem);
+        margin: 0 1rem;
+        width: calc(100vw - 2rem);
+    }
+    #heading {
+        display: block;
+        width: calc(100vw - 2rem);
+        margin: 2rem auto 5rem auto;
+    }
+    }
+
+
+    @media (min-width: 320px) and (max-width: 400px) {  
+        #app {
+            display: grid;
+            gap: 2.5rem;
+            grid-template-columns: calc(100vw - 2rem);
+            margin: 0 1rem;
+            width: calc(100vw - 2rem);
+        }
+        #heading {
+            display: block;
+            width: calc(100vw - 2rem);
+            margin: 2rem auto 5rem auto;
+        }
+        }
+        
