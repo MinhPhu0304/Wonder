@@ -6,7 +6,7 @@ html{
 
 #heading H1 {
     font-size: 72px;
-    margin-bottom: auto;
+    margin: auto;
 }
 
 #heading {
@@ -15,6 +15,7 @@ html{
 
 #headerText {
     text-align: center;
+    margin: auto;
 }
 
 h1 {
@@ -32,9 +33,9 @@ h2 {
 #app{
     display: grid;
     gap: 2rem;
-    grid-template-columns: 39rem 39rem;
+    grid-template-columns: 20rem 20rem 20rem;
     margin: 0 auto;
-    width: 80rem;
+    width: 64rem;
     
 }
 
@@ -63,14 +64,6 @@ h2 {
     font-size: 2rem;
     height: 5rem;
 
-}
-
-.EventDescription{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4; /* number of lines to show */
 }
 
 button {
