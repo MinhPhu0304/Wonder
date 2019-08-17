@@ -4,7 +4,7 @@ var items = [
     {
     "title": "accord",
     "description": "focus",
-    "timeDate": "accord",
+    "timeDate": "12 jan",
     "location": "focus",
     "link": "google.com"
     },
@@ -27,12 +27,14 @@ var items = [
 console.log(items);
 for(var i = 0; i < items.length; i++) {
     var divCard = document.createElement("div");
-    var CardTitle = document.createElement("h2");//
+    divCard.className = 'EventCard';
+    var CardTitle = document.createElement("h1");//
     var CardBody = document.createElement("div");
     var CardDescription= document.createElement("p");//
     var CardTime = document.createElement("p");//
     var CardLocation = document.createElement("p");//
     var Link = document.createElement("a");//
+    Link.href = items[i].link;
     console.log(Link)
 
     CardTitle.innerHTML = items[i].title;
@@ -41,10 +43,10 @@ for(var i = 0; i < items.length; i++) {
     CardLocation.innerHTML = items[i].location;
     Link.innerHTML = items[i].link;
     
-    
+    divCard.appendChild(CardTime);
     divCard.appendChild(CardTitle);
     divCard.appendChild(CardDescription);
-    divCard.appendChild(CardTime);
+    
     divCard.appendChild(CardLocation);
     divCard.appendChild(Link);
     app.appendChild(divCard);
