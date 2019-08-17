@@ -1,21 +1,33 @@
 var app = document.getElementById('app');
 var cards = document.getElementsByClassName("EventCard");
-//var items = ;
+var items;
 var isModalOpen= false;
+
+async function getItems(){
+    var items = await fetch("http://localhost:3000/api/events");
+    console.log(items);
+}
+
+window.onload = getItems();
+
 
 function openModal(index){
 isModalOpen = true;
 
-var ModalTitle = document.createElement("");
+var ModalTitle = document.createElement("h1");
+ModalTitle.innerHTML = items[index].title;
+
+var ModalEventPage = document.createElement("button");
+ModalTitle.innerHTML = items[index].link;
 
 }
 
 console.log(items);
-for(var i = 0; i < items.length; i++) {
+for(var index = 0; index < items.length; index++) {
 
     var divCard = document.createElement("div");
     divCard.className = 'EventCard';
-    //divCard.onclick = () => ;
+    //divCard.onclick = () => openModal(i);
 
     var CardTime = document.createElement("p");//
     CardTime.className = 'EventTimeDate';
