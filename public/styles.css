@@ -141,6 +141,12 @@ button {
 
     }
 
+    #spinner{
+        left: 50%;
+  top: 50%;
+  position: relative;
+        color: white;
+    }
 
     @media (min-width: 320px) and (max-width: 400px) {  
         #app {

@@ -7,6 +7,8 @@ async function getItems(){
     let url = window.location.origin;
     var response = await fetch(`${url}/api/events`)
 
+    let spinner = document.getElementById("spinner")
+    spinner.style.display = 'none'
     items = await response.json();
     for(let i = 0; i < items.length; i++) {
         var divCard = document.createElement("div");
