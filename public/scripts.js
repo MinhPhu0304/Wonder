@@ -4,10 +4,9 @@ var items = [{}]
 var isModalOpen= false;
 
 async function getItems(){
-    var response = await fetch("http://localhost:3000/api/events")
-                        // .then(res => return res.json())
-                        // .then(data => { console.log(data)})
-                        // .catch(err => console.log(err));
+    let url = window.location.origin;
+    var response = await fetch(`${url}/api/events`)
+
     items = await response.json();
     for(let i = 0; i < items.length; i++) {
         var divCard = document.createElement("div");
@@ -74,9 +73,4 @@ function openModal(index){
             let modalDiv = document.getElementById('modal')
             modalDiv.style.display = 'block'
             modalDiv.appendChild(ModalWrapper)
-            /*
-        let Link = document.createElement("button");//
-            Link.href = items[i].link;
-            Link.onclick = () => window.location.href = (Link.href);
-            */
 }
