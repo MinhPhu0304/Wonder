@@ -4,6 +4,14 @@ html{
 }
 h1 {
     font-size: 72px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+
+}
+
+h2 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
 }
 
 #app{
