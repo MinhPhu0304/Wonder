@@ -1,14 +1,36 @@
 var app = document.getElementById('app');
 var cards = document.getElementsByClassName("EventCard");
-var items;
+var items = [
+    {
+    "title": "accord",
+    "description": "focus",
+    "timeDate": "accord",
+    "location": "focus",
+    "link": "google.com"
+    },
+    {
+    "title": "accord2",
+    "description": "focus2",
+    "timeDate": "accord2",
+    "location": "focus2",
+    "link": "facebook.con"
+    },
+    {
+    "title": "accord3",
+    "description": "focus3",
+    "timeDate": "accord3",
+    "location": "focus3",
+    "link": "hypixel.net"
+    }
+]
 var isModalOpen= false;
 
-async function getItems(){
-    var items = await fetch("http://localhost:3000/api/events");
-    console.log(items);
-}
+// async function getItems(){
+//     var items = await fetch("http://localhost:3000/api/events");
+//     console.log(items);
+// }
 
-window.onload = getItems();
+// window.onload = getItems();
 
 
 function openModal(index){
@@ -57,10 +79,10 @@ for(var index = 0; index < items.length; index++) {
     //LinkText = "Go to event page!";
     //console.log(Link)
 
-    CardTitle.innerHTML = items[i].title;
-    CardDescription.innerHTML = items[i].description;
-    CardTime.innerHTML = items[i].timeDate;
-    CardLocation.innerHTML = items[i].location;
+    CardTitle.innerHTML = items[index].title;
+    CardDescription.innerHTML = items[index].description;
+    CardTime.innerHTML = items[index].timeDate;
+    CardLocation.innerHTML = items[index].location;
     //Link.innerHTML = items[i].link;
     
     divCard.appendChild(CardTime);
