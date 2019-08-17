@@ -8,10 +8,11 @@ const requestToMeetUpApi = async ()=> {
     const returnBody = JSON.parse (response)
     data = returnBody.events.map(element => {
         const { name, description, venue, local_date, local_time, link } = element
+        const cleanBio = description.replace(/<[^>]*>?/gm, '');
         const address = venue ?  `${venue.address_1} ${venue.address_2}` : ``
         return {
             name,
-            bio: description,
+            bio: cleanBio,
             time: `${local_date} ${local_time}`,
             link,
             address

@@ -9,6 +9,7 @@ const port = process.env.PORT || 3000;
 const app = Express();
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(Express.static('public'))
 app.use(Express.static('/'))
 
 app.get('/', function (req, res) {
@@ -20,7 +21,6 @@ app.get('/api/events', async (req, res) => {
     const eventbriteData = await GetAllTechEventsFromEventBrite()
     data = [...meetupData, ...eventbriteData]
     res.json(data)
-    console.log(data)
 })
 
 app.listen(port, () => {

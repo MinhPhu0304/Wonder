@@ -1,36 +1,19 @@
 var app = document.getElementById('app');
 var cards = document.getElementsByClassName("EventCard");
-var items = [
-    {
-    "title": "accord",
-    "description": "focus",
-    "timeDate": "accord",
-    "location": "focus",
-    "link": "google.com"
-    },
-    {
-    "title": "accord2",
-    "description": "focus2",
-    "timeDate": "accord2",
-    "location": "focus2",
-    "link": "facebook.con"
-    },
-    {
-    "title": "accord3",
-    "description": "focus3",
-    "timeDate": "accord3",
-    "location": "focus3",
-    "link": "hypixel.net"
-    }
-]
+var items = [{}]
 var isModalOpen= false;
 
-// async function getItems(){
-//     var items = await fetch("http://localhost:3000/api/events");
-//     console.log(items);
-// }
+async function getItems(){
+    let items
+    var response = await fetch("http://localhost:3000/api/events")
+                        // .then(res => return res.json())
+                        // .then(data => { console.log(data)})
+                        // .catch(err => console.log(err));
+    items = await response.json();
+    console.log(items)
+}
 
-// window.onload = getItems();
+window.onload = getItems();
 
 
 function openModal(index){
@@ -43,8 +26,6 @@ var ModalEventPage = document.createElement("button");
 ModalTitle.innerHTML = items[index].link;
 
 }
-
-console.log(items);
 for(var index = 0; index < items.length; index++) {
 
     var divCard = document.createElement("div");
