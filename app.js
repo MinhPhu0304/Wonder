@@ -9,8 +9,8 @@ const port = process.env.PORT || 3000;
 const app = Express();
 app.use(cors())
 app.use(bodyParser.json())
+app.use(Express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(Express.static('/'))
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'))
