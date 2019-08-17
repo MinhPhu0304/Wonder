@@ -10,11 +10,13 @@ html{
 }
 
 #heading {
-    display: flex;
+    display: block;
+    width: 76rem;
+    margin: 2rem auto 5rem auto;
 }
 
 #headerText {
-    text-align: center;
+    text-align: left;
     margin: auto;
 }
 
@@ -33,10 +35,9 @@ h2 {
 #app{
     display: grid;
     gap: 2rem;
-    grid-template-columns: 20rem 20rem 20rem;
+    grid-template-columns: 24rem 24rem 24rem;
     margin: 0 auto;
-    width: 64rem;
-    
+    width: 76rem;
 }
 
 .EventCard {
@@ -63,7 +64,20 @@ h2 {
 .EventTitle{
     font-size: 2rem;
     height: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
 
+}
+
+.EventDescription {
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 3; /* number of lines to show */
 }
 
 button {
@@ -71,4 +85,23 @@ button {
     padding: 1.5rem;
     background: none;
     color: white;
+}
+
+/*Small screens*/
+@media screen and (min-width:801px) and (max-width:1216px){
+    #app{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, 40vw);
+        margin: 0 auto;
+        width: calc(100vw - 2rem);
+    }
+}
+
+@media screen and (max-width:800px){
+    #app{
+        gap: 0;
+        grid-template-columns: calc(100vw - 2rem);
+        width: calc(100vw - 2rem);
+    }
 }
