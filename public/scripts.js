@@ -19,7 +19,8 @@ async function getItems(){
         CardTime.className = 'EventTimeDate';
     
         var CardLocation = document.createElement("p");
-
+        CardLocation.className = 'EventLocation';
+        
         var CardTitle = document.createElement("h1");
         CardTitle.className = 'EventTitle';
 
@@ -36,9 +37,10 @@ async function getItems(){
     
         divCard.appendChild(CardTime);
         divCard.appendChild(CardTitle);
+        divCard.appendChild(CardLocation);
         divCard.appendChild(CardDescription);
         
-        divCard.appendChild(CardLocation);
+
         app.appendChild(divCard);
     }
 }

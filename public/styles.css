@@ -49,6 +49,11 @@ h2 {
     padding: 1rem;
 }
 
+.EventLocation {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
 .EventCard:hover {
     box-shadow: 1px 1px 24px #3500A6;
     transition: all 0.3s;
@@ -63,7 +68,7 @@ h2 {
 .EventTitle {
     font-size: 2rem;
     font-weight: 700;
-    height: 5rem;
+    margin: 1rem 0;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -73,7 +78,7 @@ h2 {
 }
 
 .EventDescription {
-    margin-bottom: 1rem;
+
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -88,3 +93,4 @@ button {
     background: none;
     color: white;
 }
+
