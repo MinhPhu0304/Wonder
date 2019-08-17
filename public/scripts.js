@@ -12,7 +12,7 @@ async function getItems(){
     for(let i = 0; i < items.length; i++) {
         var divCard = document.createElement("div");
         divCard.className = 'EventCard';
-        divCard.onclick = () => openModal;
+        divCard.onclick = () => openModal(i);
     
         var CardTime = document.createElement("p");
         CardTime.className = 'EventTimeDate';
@@ -50,13 +50,33 @@ var isModalOpen= false;
 
 function openModal(index){
     isModalOpen = true;
-    
-    var ModalTitle = document.createElement("h1");
-    ModalTitle.innerHTML = items[index].title;
-    
-    var ModalEventPage = document.createElement("button");
-    ModalEventPage.innerHTML = items[index].link;
-    
-    var ModalDescription = document.createElement("p");
-    ModalDescription.innerHTML = items[index].description;
+    let ModalHeader = document.createElement("div");
+        let ModalCloseButton = document.createElement("span");
+            ModalCloseButton.className = "close-btn";
+            ModalHeader.appendChild(ModalCloseButton);
+        let ModalTitle = document.createElement("h1");
+            // ModalTitle.innerHTML = items[index].title;
+            ModalTitle.innerHTML = items[index].name;
+            ModalHeader.appendChild(ModalTitle);
+    let ModalBody = document.createElement("div");
+        ModalBody.className = "modal-context";
+        let ModalEventPage = document.createElement("a");
+            ModalEventPage.href = items[index].link;
+            ModalBody.appendChild(ModalEventPage);
+        let ModalDescription = document.createElement("p");
+            ModalDescription.innerHTML = items[index].bio;
+            ModalBody.appendChild(ModalDescription);
+        let ModalWrapper = document.createElement("div");
+            ModalWrapper.id = "modal";
+            ModalWrapper.style.display = 'block'
+            ModalWrapper.appendChild(ModalHeader);
+            ModalWrapper.appendChild(ModalBody);
+            let modalDiv = document.getElementById('modal')
+            modalDiv.style.display = 'block'
+            modalDiv.appendChild(ModalWrapper)
+            /*
+        let Link = document.createElement("button");//
+            Link.href = items[i].link;
+            Link.onclick = () => window.location.href = (Link.href);
+            */
 }

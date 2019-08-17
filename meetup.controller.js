@@ -19,7 +19,8 @@ const requestToMeetUpApi = async ()=> {
             time: `${startTime}`,
             link,
             date: `${startDate}`,  
-            address
+            address,
+            site: 'Meetup'
         }
     })
     return data

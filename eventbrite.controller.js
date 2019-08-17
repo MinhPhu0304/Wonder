@@ -20,7 +20,8 @@ const GetAllTechEventsFromEventBrite = async () => {
       bio: description.text,
       link: url,
       date: startDate,
-      time: startTime
+      time: startTime,
+      site: 'EventBrite'
     }
   })
   return data
