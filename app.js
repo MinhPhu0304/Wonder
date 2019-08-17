@@ -21,8 +21,9 @@ app.get('/api/events', async (req, res) => {
 
     data = [...dataMeetup, ...eventBritedata]
     res.json(data)
+    console.log(data)
 })
 
-app.listen(port, ()=> {
+app.listen(port, () => {
     console.log(`Server is runing on port ${port}`)
 })
