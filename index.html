@@ -7,8 +7,8 @@
   <link href="https://fonts.googleapis.com/css?family=Cabin:400,600,600i,700,700i&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/css/uikit.min.css" />
 
-<!-- UIkit JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit.min.js"></script>
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit.min.js"></script>
   <link href="./styles.css" rel="stylesheet" type="text/css">
   <link rel="icon" href="./favicon.ico" type="image/x-icon" />
 
@@ -28,13 +28,20 @@
     </div>
 
   </div>
-<div class='SearchContainer'>
-  <form class="uk-search uk-search-large">
-    <a href="" uk-search-icon></a>
-    <input class="uk-search-input" type="search" placeholder="Try &ldquo;JavaScript&rdquo;">
-</form>
-</div>
+  <div class='SearchContainer'>
+    <form class="uk-search uk-search-large">
+      <a href="" uk-search-icon></a>
+      <input class="uk-search-input" type="search" placeholder="Try &ldquo;JavaScript&rdquo;">
+    </form>
 
+  </div>
+  <!-- UI Modal-->
+  <div id="my-id" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+      <h2 class="uk-modal-title"></h2>
+      <button class="uk-modal-close" type="button"></button>
+    </div>
+  </div>
 
   <div id='app'></div>
   <div id='modal'></div>
