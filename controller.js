@@ -1,8 +1,10 @@
 const request = require('request')
+require('dotenv').config()
+const key = process.env.EventBriteToken
 
 request('https://www.eventbriteapi.com/v3/events/search/?categories=102', {
   'auth': {
-    'bearer': '#########'
+    'bearer': key
   }
 }, function (error, response, body) {
   console.error('error:', error); // Print the error if one occurred
