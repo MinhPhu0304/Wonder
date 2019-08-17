@@ -27,7 +27,7 @@ var items = [
 console.log(items);
 for(var i = 0; i < items.length; i++) {
     var divCard = document.createElement("div");
-    var CardTitle = document.createElement("h1");//
+    var CardTitle = document.createElement("h2");//
     var CardBody = document.createElement("div");
     var CardDescription= document.createElement("p");//
     var CardTime = document.createElement("p");//

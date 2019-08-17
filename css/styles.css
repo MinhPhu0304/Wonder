@@ -5,8 +5,17 @@
 h1 {
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 72px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+
 }
 
-.EventCard {
+h2 {
     font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+}
+
+.EventCard {  
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    border: 1px solid black;
 }
