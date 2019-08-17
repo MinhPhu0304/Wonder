@@ -1,16 +1,26 @@
 html{
     font-family: 'Cabin', sans-serif;
-    background-color: lightpink;
+    background-color: #2E224F;
+    color: #FFFFFF;
 }
+
+#heading H1 {
+    font-size: 72px;
+    margin-bottom: auto;
+}
+
+#heading {
+    display: flex;
+}
+
 h1 {
     font-size: 72px;
     margin-left: 0 auto;
     margin-right: 0 auto;
-
+    color: #FFFFFF;
 }
 
 h2 {
-    font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 20px;
 }
 
@@ -25,11 +35,18 @@ h2 {
 
 .EventCard {
     border-radius: 12px;
-    background-color: white;
+    background-color: #6F44E6;
     box-shadow: 1px 1px 20px #333;
     padding: 1rem;
 
 }
+
+.EventCard:hover{
+    background-color: #6D38FF;
+    box-shadow: 1px 1px 20px #6232E6;
+    transition: all 0.3s;
+}
+
 
 .EventTimeDate{
 
@@ -49,5 +66,11 @@ h2 {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4; /* number of lines to show */
+}
 
+button {
+    border: 2px solid white;
+    padding: 1.5rem;
+    background: none;
+    color: white;
 }
