@@ -1,5 +1,6 @@
 require('dotenv').config()
 const request = require('request-promise');
+const moment = require('moment');
 const key = process.env.EventBriteToken
 
 const GetAllTechEventsFromEventBrite = async () => {
@@ -12,10 +13,14 @@ const GetAllTechEventsFromEventBrite = async () => {
   const returnBody = JSON.parse(response)
   data = returnBody.events.map(element => {
     const { name, description, url } = element
+    const startDate = moment(element.start.utc).format("dddd, Do MMMM YYYY");
+    const startTime = moment(element.start.utc).format("hh:mm A")
     return {
       name: name.text,
       bio: description.text,
-      link: url
+      link: url,
+      date: startDate,
+      time: startTime
     }
   })
   return data
