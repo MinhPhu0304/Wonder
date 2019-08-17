@@ -4,7 +4,7 @@ const key = process.env.EventBriteToken
 
 const GetAllTechEventsFromEventBrite = async () => {
   let data
-  const response = await request('https://www.eventbriteapi.com/v3/events/search/?categories=102', {
+  const response = await request('https://www.eventbriteapi.com/v3/events/search/?categories=102&location.address=Auckland', {
     'auth': {
       'bearer': key
     }
