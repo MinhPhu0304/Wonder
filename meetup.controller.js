@@ -1,5 +1,6 @@
 require('dotenv').config()
 const request = require('request-promise');
+const moment = require('moment');
 const meetupAPI = process.env.MeetupToken
 const category =  'tech'
 const requestToMeetUpApi = async ()=> {
@@ -8,13 +9,18 @@ const requestToMeetUpApi = async ()=> {
     const returnBody = JSON.parse (response)
     data = returnBody.events.map(element => {
         const { name, description, venue, local_date, local_time, link } = element
+        const startDate = moment(local_date).format('dddd, Do MMMM YYYY')
+        const startTime = moment(local_time,[moment.ISO_8601, 'HH:mm']).format("h:mm A")
+        const cleanBio = description.replace(/<[^>]*>?/gm, '');
         const address = venue ?  `${venue.address_1} ${venue.address_2}` : ``
         return {
             name,
-            bio: description,
-            time: `${local_date} ${local_time}`,
+            bio: cleanBio,
+            time: `${startTime}`,
             link,
-            address
+            date: `${startDate}`,  
+            address,
+            site: 'Meetup'
         }
     })
     return data
