@@ -32,9 +32,9 @@ h2 {
 #app{
     display: grid;
     gap: 2rem;
-    grid-template-columns: 20rem 20rem 20rem;
+    grid-template-columns: 39rem 39rem;
     margin: 0 auto;
-    width: 64rem;
+    width: 80rem;
     
 }
 
@@ -63,6 +63,14 @@ h2 {
     font-size: 2rem;
     height: 5rem;
 
+}
+
+.EventDescription{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; /* number of lines to show */
 }
 
 button {
