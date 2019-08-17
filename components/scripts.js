@@ -27,12 +27,14 @@ var items = [
 console.log(items);
 for(var i = 0; i < items.length; i++) {
     var divCard = document.createElement("div");
+    divCard.className = 'EventCard';
     var CardTitle = document.createElement("h1");//
     var CardBody = document.createElement("div");
     var CardDescription= document.createElement("p");//
     var CardTime = document.createElement("p");//
     var CardLocation = document.createElement("p");//
     var Link = document.createElement("a");//
+    Link.href = items[i].link;
     console.log(Link)
 
     CardTitle.innerHTML = items[i].title;
