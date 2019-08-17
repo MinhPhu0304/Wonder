@@ -13,8 +13,9 @@ const requestToMeetUpApi = async ()=> {
         return {
             name,
             bio: cleanBio,
-            time: `${local_date} ${local_time}`,
+            time: `${local_time}`,
             link,
+            date: `${local_date}`,  
             address
         }
     })

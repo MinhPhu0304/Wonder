@@ -9,8 +9,7 @@ async function getItems(){
                         // .then(data => { console.log(data)})
                         // .catch(err => console.log(err));
     items = await response.json();
-    console.log(items)
-    for(var i = 0; i < items.length; i++) {
+    for(let i = 0; i < items.length; i++) {
         var divCard = document.createElement("div");
         divCard.className = 'EventCard';
         divCard.onclick = () => openModal;
@@ -32,8 +31,8 @@ async function getItems(){
 
         CardTitle.innerHTML = items[i].name;
         CardDescription.innerHTML = items[i].bio;
-        CardTime.innerHTML = items[i].time;
-        CardLocation.innerHTML = items[i].address;
+        CardTime.innerHTML = items[i].date;
+        CardLocation.innerHTML = `${items[i].time} at ${items[i].address}`;
     
         divCard.appendChild(CardTime);
         divCard.appendChild(CardTitle);
@@ -46,17 +45,6 @@ async function getItems(){
 }
 
 window.onload = getItems();
-
-function openModal(index){
-isModalOpen = true;
-
-var ModalTitle = document.createElement("h1");
-ModalTitle.innerHTML = items[index].title;
-
-var ModalEventPage = document.createElement("button");
-ModalTitle.innerHTML = items[index].link;
-
-}
 
 var isModalOpen= false;
 
