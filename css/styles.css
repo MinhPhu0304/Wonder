@@ -13,6 +13,10 @@ html{
     display: flex;
 }
 
+#headerText {
+    text-align: center;
+}
+
 h1 {
     font-size: 72px;
     margin-left: 0 auto;
@@ -22,6 +26,7 @@ h1 {
 
 h2 {
     font-size: 20px;
+    font-style: italic;
 }
 
 #app{
