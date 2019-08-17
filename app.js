@@ -1,5 +1,6 @@
 const Express = require('express');
 const path = require('path')
+const { GetAllTechEventsFromEventBrite } = require('./eventbrite.controller.js')
 const { requestToMeetUpApi } = require('./meetup.controller.js')
 const bodyParser = require('body-parser')
 require('dotenv').config()
@@ -15,10 +16,13 @@ app.get('/', function (req, res) {
 });
 
 app.get('/api/events', async (req, res) => {
-    const data = await requestToMeetUpApi()
+    const meetupData = await requestToMeetUpApi()
+    const eventbriteData = await GetAllTechEventsFromEventBrite()
+    data = [...meetupData, ...eventbriteData]
     res.json(data)
+    console.log(data)
 })
 
-app.listen(port, ()=> {
+app.listen(port, () => {
     console.log(`Server is runing on port ${port}`)
 })
