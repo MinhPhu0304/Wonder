@@ -36,8 +36,7 @@ async function getItems(){
         divCard.appendChild(CardTime);
         divCard.appendChild(CardTitle);
         divCard.appendChild(CardLocation);
-        divCard.appendChild(CardDescription);
-        
+        divCard.appendChild(CardDescription);        
 
         app.appendChild(divCard);
     }
