@@ -8,6 +8,21 @@ html {
     color: white;
 }
 
+.linkedInShare{
+    background: black;
+    color: white;
+}
+
+.twitterShare{
+    background: lightblue;
+    color: white;
+}
+
+.registerButton{
+    background: lightblue;
+    color: white;
+}
+
 .PageTitle {
     font-size: 72px;
     margin: auto;
