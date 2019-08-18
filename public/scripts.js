@@ -40,39 +40,6 @@ async function getItems() {
         divCard.appendChild(CardLocation);
         divCard.appendChild(CardDescription);
 
-        
-        var facebookShareURL = ("https://www.facebook.com/sharer/sharer.php?u=" + items[i].link)
-        var shareButton = document.createElement("button");
-            shareButton.className = "fbShare";
-            shareButton.innerHTML = "Share to facebook"
-            shareButton.href = (facebookShareURL)
-            shareButton.onclick = () => window.location.href = (facebookShareURL);
-        divCard.appendChild(shareButton);
-        
-        var linkedInShareURL = ("https://www.linkedin.com/sharing/share-offsite/?url=" + items[i].link)
-        var linkedInShareButton = document.createElement("button");
-            linkedInShareButton.className = "linkedInShare";
-            linkedInShareButton.innerHTML = "Share to LinkedIn"
-            linkedInShareButton.href = (linkedInShareURL)
-            linkedInShareButton.onclick = () => window.location.href = (linkedInShareURL);
-        divCard.appendChild(linkedInShareButton);
-
-        var twitterShareURL = ("https://twitter.com/intent/tweet?url=" + items[i].link + "&via=getboldify&text=Join me at this kiwi tech event!")
-        var twitterShareButton = document.createElement("button");
-            twitterShareButton.className = "twitterShare";
-            twitterShareButton.innerHTML = "Share to twitter"
-            twitterShareButton.href = (twitterShareURL)
-            twitterShareButton.onclick = () => window.location.href = (twitterShareURL);
-        divCard.appendChild(twitterShareButton);
-
-        var registerURL = (items[i].link)
-        var registerButton = document.createElement("button");
-            registerButton.className = "registerButton";
-            registerButton.innerHTML = "Register!"
-            registerButton.href = (registerURL)
-            registerButton.onclick = () => window.location.href = (registerURL);
-        divCard.appendChild(registerButton);
-
         app.appendChild(divCard);
     }
 }

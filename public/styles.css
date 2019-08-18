@@ -1,7 +1,8 @@
 html {
     font-family: 'Cabin', sans-serif;
+    background-color: #2E224F;
+    color: #FAFAFA;
     border-radius: 25px;
-    background-color: #5C24D5;
 }
 
 #facebook{
@@ -26,7 +27,6 @@ html {
     background: lightblue;
     color: white;
     border-radius: 25px;
-
 }
 
 .PageTitle {
@@ -39,7 +39,7 @@ html {
 }
 
 #heading {
-    display: block;
+    display: flex;
     width: 80rem;
     margin: 2rem auto 5rem auto;
 }
@@ -53,7 +53,7 @@ h1 {
     font-size: 72px;
     margin-left: 0 auto;
     margin-right: 0 auto;
-    color: #000;
+    color: #FAFAFA;
 }
 
 h2 {
@@ -71,8 +71,8 @@ h2 {
 
 .EventCard {
     border-radius: 12px;
-    background-color: #fff;
-    box-shadow: 1px 1px 20px #5100FF;
+    background-color: #6F44E6;
+    box-shadow: 1px 1px 20px #333;
     border: 5px black solid;
     padding: 1rem;
     font-family: 'Cabin', sans-serif;
@@ -85,14 +85,15 @@ h2 {
 }
 
 .EventCard:hover {
-    box-shadow: 2px 2px 24px #9868FF;
+    background-color: #6D38FF;
+    box-shadow: 2px 2px 24px #6232E6;
     transition: all 0.3s;
     transform: translateY(2px) translateX(2px);
 }
 
 .EventTimeDate {
     font-weight: 700;
-    color: #5C24D5;
+    color: #371C80;
 }
 
 .EventTitle {
@@ -130,7 +131,6 @@ button {
     background: white;
     border-radius: 12px;
     margin: 0rem auto 5rem auto;
-    box-shadow: 1px 1px 20px #5100FF;
     border: 5px black solid;
 }
 
@@ -161,7 +161,7 @@ button {
         width: calc(100vw - 2rem);
     }
     #heading {
-        display: block;
+        display: flex;
         width: calc(100vw - 2rem);
         margin: 2rem auto 5rem auto;
     }
@@ -224,7 +224,7 @@ button {
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: #2E224F;
             z-index: 1;
           }
           
