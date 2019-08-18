@@ -3,6 +3,26 @@ html {
     background-color: #5C24D5;
 }
 
+.fbShare{
+    background: blue;
+    color: white;
+}
+
+.linkedInShare{
+    background: black;
+    color: white;
+}
+
+.twitterShare{
+    background: lightblue;
+    color: white;
+}
+
+.registerButton{
+    background: lightblue;
+    color: white;
+}
+
 .PageTitle {
     font-size: 72px;
     margin: auto;
@@ -141,6 +161,12 @@ button {
 
     }
 
+    #spinner{
+        left: 50%;
+  top: 50%;
+  position: relative;
+        color: white;
+    }
 
     @media (min-width: 320px) and (max-width: 400px) {  
         #app {

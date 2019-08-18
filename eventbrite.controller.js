@@ -21,7 +21,8 @@ const GetAllTechEventsFromEventBrite = async () => {
       link: url,
       date: startDate,
       time: startTime,
-      site: 'EventBrite'
+      site: 'EventBrite',
+      location: ''
     }
   })
   return data
