@@ -42,7 +42,6 @@ async function getItems() {
 
         
         var facebookShareURL = ("https://www.facebook.com/sharer/sharer.php?u=" + items[i].link)
-        console.log(facebookShareURL);
         var shareButton = document.createElement("button");
             shareButton.className = "fbShare";
             shareButton.innerHTML = "Share to facebook"
@@ -51,7 +50,6 @@ async function getItems() {
         divCard.appendChild(shareButton);
         
         var linkedInShareURL = ("https://www.linkedin.com/sharing/share-offsite/?url=" + items[i].link)
-        console.log(linkedInShareURL);
         var linkedInShareButton = document.createElement("button");
             linkedInShareButton.className = "linkedInShare";
             linkedInShareButton.innerHTML = "Share to LinkedIn"
@@ -60,7 +58,6 @@ async function getItems() {
         divCard.appendChild(linkedInShareButton);
 
         var twitterShareURL = ("https://twitter.com/intent/tweet?url=" + items[i].link + "&via=getboldify&text=Join me at this kiwi tech event!")
-        console.log(twitterShareURL);
         var twitterShareButton = document.createElement("button");
             twitterShareButton.className = "twitterShare";
             twitterShareButton.innerHTML = "Share to twitter"
