@@ -1,11 +1,8 @@
 html {
     font-family: 'Cabin', sans-serif;
-<<<<<<< HEAD
     background-color: #2E224F;
     color: #FAFAFA;
-=======
     border-radius: 25px;
-    background-color: #5C24D5;
 }
 
 #facebook{
@@ -30,8 +27,6 @@ html {
     background: lightblue;
     color: white;
     border-radius: 25px;
-
->>>>>>> a0e461111bd1d1847b4412f49960a44f2928ac25
 }
 
 .PageTitle {
