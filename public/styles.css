@@ -1,0 +1,211 @@
+html {
+    font-family: 'Cabin', sans-serif;
+    background-color: #2E224F;
+    color: #FAFAFA;
+}
+
+.PageTitle {
+    font-size: 72px;
+    margin: auto;
+    margin-top: 4rem;
+    color: #fff;
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
+}
+
+#heading {
+    display: flex;
+    width: 80rem;
+    margin: 2rem auto 5rem auto;
+}
+
+#headerText {
+    text-align: left;
+    margin: auto;
+}
+
+h1 {
+    font-size: 72px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    color: #FAFAFA;
+}
+
+h2 {
+    font-size: 20px;
+    font-style: italic;
+}
+
+#app {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: 25rem 25rem 25rem;
+    margin: 0 auto;
+    width: 80rem;
+}
+
+.EventCard {
+    border-radius: 12px;
+    background-color: #6F44E6;
+    box-shadow: 1px 1px 20px #333;
+    border: 5px black solid;
+    padding: 1rem;
+}
+
+.EventLocation {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.EventCard:hover {
+    background-color: #6D38FF;
+    box-shadow: 2px 2px 24px #6232E6;
+    transition: all 0.3s;
+    transform: translateY(2px) translateX(2px);
+}
+
+.EventTimeDate {
+    font-weight: 700;
+    color: #5C24D5;
+}
+
+.EventTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
+}
+
+.EventDescription {
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
+}
+
+button {
+    border: 2px solid white;
+    padding: 1.5rem;
+    background: none;
+    color: white;
+}
+
+.SearchContainer {
+    height:5rem;
+    width: 80rem;
+    background: white;
+    border-radius: 12px;
+    margin: 0rem auto 5rem auto;
+    border: 5px black solid;
+}
+
+.uk-search-input {
+    height: 5rem;
+    width: 66rem;
+}
+
+
+@media (min-width: 401px) and (max-width: 1280px) { 
+    /* Device: Laptops, Desktops  #Screen: 1025px to 1280px */
+    #app {
+        display: grid;
+        gap: 2.5rem;
+        grid-template-columns: repeat(auto-fill, 25rem);
+        margin: 0 1rem;
+        width: calc(100vw - 2rem);
+    }
+    #heading {
+        display: flex;
+        width: calc(100vw - 2rem);
+        margin: 2rem auto 5rem auto;
+    }
+
+    .SearchContainer {
+        height:5rem;
+        width: calc(100vw - 2rem);
+
+    }
+    
+    .uk-search-input {
+        height: 5rem;
+        width: calc(100vw - 2rem);
+    }
+    
+
+    }
+
+
+    @media (min-width: 320px) and (max-width: 400px) {  
+        #app {
+            display: grid;
+            gap: 2.5rem;
+            grid-template-columns: calc(100vw - 2rem);
+            margin: 0 1rem;
+            width: calc(100vw - 2rem);
+        }
+        #heading {
+            display: block;
+            width: calc(100vw - 2rem);
+            margin: 2rem auto 5rem auto;
+        }
+
+        .SearchContainer {
+            height:5rem;
+            width: calc(100vw - 2rem);
+    
+        }
+        
+        .uk-search-input {
+            height: 5rem;
+            width: calc(100vw - 2rem);
+        }
+        }
+        #modal {
+            display: none;
+            position: fixed;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #2E224F;
+            z-index: 1;
+          }
+          .modal-content {
+            position: relative;
+            background-color: white;
+            padding: 20px;
+            margin: auto;
+            width: 75%;
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+          }
+          .close-btn {
+            float: right;
+            color: lightgray;
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .close-btn:hover {
+            color: darkgray;
+          }
+          @-webkit-keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+          }
+          @keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+          }
+         
+         
