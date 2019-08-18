@@ -33,7 +33,7 @@ async function getItems() {
         CardTitle.innerHTML = items[i].name;
         CardDescription.innerHTML = items[i].bio;
         CardTime.innerHTML = items[i].date;
-        CardLocation.innerHTML = `${items[i].time} at ${items[i].address}`;
+        CardLocation.innerHTML = `${items[i].time} at ${items[i].address ?  items[i].address : 'To be announced'}`;
 
         divCard.appendChild(CardTime);
         divCard.appendChild(CardTitle);
