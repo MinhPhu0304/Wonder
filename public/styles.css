@@ -1,26 +1,32 @@
 html {
     font-family: 'Cabin', sans-serif;
+    border-radius: 25px;
     background-color: #5C24D5;
 }
 
-.fbShare{
+#facebook{
     background: blue;
     color: white;
+    border-radius: 25px;
 }
 
-.linkedInShare{
+#LinkedIn{
     background: black;
     color: white;
+    border-radius: 25px;
 }
 
-.twitterShare{
+#twitter{
     background: lightblue;
     color: white;
+    border-radius: 25px;
 }
 
-.registerButton{
+#ViewMore{
     background: lightblue;
     color: white;
+    border-radius: 25px;
+
 }
 
 .PageTitle {
@@ -162,10 +168,14 @@ button {
     }
 
     #spinner{
-        left: 50%;
-  top: 50%;
-  position: relative;
+        left: 40%;
+        top: 50%;
+        position: relative;
         color: white;
+    }
+
+    #description{
+        font-size: 1rem;
     }
 
     @media (min-width: 320px) and (max-width: 400px) {  
