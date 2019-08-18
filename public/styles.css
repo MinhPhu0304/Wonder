@@ -3,6 +3,26 @@ html {
     background-color: #5C24D5;
 }
 
+.fbShare{
+    background: blue;
+    color: white;
+}
+
+.linkedInShare{
+    background: black;
+    color: white;
+}
+
+.twitterShare{
+    background: lightblue;
+    color: white;
+}
+
+.registerButton{
+    background: lightblue;
+    color: white;
+}
+
 .PageTitle {
     font-size: 72px;
     margin: auto;
