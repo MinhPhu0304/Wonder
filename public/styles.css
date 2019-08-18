@@ -3,6 +3,11 @@ html {
     background-color: #5C24D5;
 }
 
+.fbShare{
+    background: blue;
+    color: white;
+}
+
 .PageTitle {
     font-size: 72px;
     margin: auto;

@@ -11,7 +11,7 @@ async function getItems(){
     for(let i = 0; i < items.length; i++) {
         var divCard = document.createElement("div");
         divCard.className = 'EventCard';
-        divCard.onclick = () => openModal(i);
+        //divCard.onclick = () => openModal(i);
     
         var CardTime = document.createElement("p");
         CardTime.className = 'EventTimeDate';
@@ -37,6 +37,16 @@ async function getItems(){
         divCard.appendChild(CardTitle);
         divCard.appendChild(CardLocation);
         divCard.appendChild(CardDescription);
+
+        
+        var shareURL = ("https://www.facebook.com/sharer/sharer.php?u=" + items[i].link)
+        console.log(shareURL);
+        var shareButton = document.createElement("button");
+            shareButton.className = "fbShare";
+            shareButton.innerHTML = "Share to facebook"
+            shareButton.href = (shareURL)
+            shareButton.onclick = () => window.location.href = (shareURL)
+        divCard.appendChild(shareButton);
         
 
         app.appendChild(divCard);
