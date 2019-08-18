@@ -12,14 +12,14 @@ const requestToMeetUpApi = async ()=> {
         const startDate = moment(local_date).format('dddd, Do MMMM YYYY')
         const startTime = moment(local_time,[moment.ISO_8601, 'HH:mm']).format("h:mm A")
         const cleanBio = description.replace(/<[^>]*>?/gm, '');
-        const address = venue ?  `${venue.address_1} ${venue.address_2}` : ``
+        const address = venue ?  `${venue.address_1} ${venue.address_2 ? venue.address_2 : '' }` : ``
         return {
             name,
             bio: cleanBio,
             time: `${startTime}`,
             link,
             date: `${startDate}`,  
-            address,
+            address: address ? address : 'To be announced',
             site: 'Meetup'
         }
     })
