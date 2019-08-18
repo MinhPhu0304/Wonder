@@ -1,7 +1,37 @@
 html {
     font-family: 'Cabin', sans-serif;
+<<<<<<< HEAD
     background-color: #2E224F;
     color: #FAFAFA;
+=======
+    border-radius: 25px;
+    background-color: #5C24D5;
+}
+
+#facebook{
+    background: blue;
+    color: white;
+    border-radius: 25px;
+}
+
+#LinkedIn{
+    background: black;
+    color: white;
+    border-radius: 25px;
+}
+
+#twitter{
+    background: lightblue;
+    color: white;
+    border-radius: 25px;
+}
+
+#ViewMore{
+    background: lightblue;
+    color: white;
+    border-radius: 25px;
+
+>>>>>>> a0e461111bd1d1847b4412f49960a44f2928ac25
 }
 
 .PageTitle {
@@ -142,6 +172,16 @@ button {
 
     }
 
+    #spinner{
+        left: 40%;
+        top: 50%;
+        position: relative;
+        color: white;
+    }
+
+    #description{
+        font-size: 1rem;
+    }
 
     @media (min-width: 320px) and (max-width: 400px) {  
         #app {
