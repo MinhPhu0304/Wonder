@@ -13,8 +13,8 @@ async function getItems() {
         var divCard = document.createElement("div");
         divCard.setAttribute("uk-toggle", "target: #my-id")
         divCard.className = 'EventCard';
-        //divCard.onclick = () => openModal(i);
-    
+        divCard.onclick = () => openModal(i);
+
         var CardTime = document.createElement("p");
         CardTime.className = 'EventTimeDate';
 
@@ -89,5 +89,11 @@ function openModal(index) {
     let modelLocation = document.getElementById("location")
     modelLocation.innerHTML = items[index].address;
     let modelButton = document.getElementById("ViewMore")
-    modelButton.setAttribute("href", items[index].url)
+    modelButton.onclick = () => window.location.href = (items[index].link);
+    let facebookButton = document.getElementById("facebook")
+    facebookButton.onclick = () => window.location.href = (("https://www.facebook.com/sharer/sharer.php?u=" + items[index].link))
+    let twitterButton = document.getElementById("twitter")
+    twitterButton.onclick = () => window.location.href = (("https://twitter.com/intent/tweet?url=" + items[index].link + "&via=getboldify&text=Join me at this kiwi tech event!"))
+    let linkedinButton = document.getElementById("LinkedIn")
+    linkedinButton.onclick = () => window.location.href = (("https://www.linkedin.com/sharing/share-offsite/?url=" + items[index].link))
 }
