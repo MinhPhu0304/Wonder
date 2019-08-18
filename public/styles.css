@@ -69,11 +69,13 @@ h2 {
     box-shadow: 1px 1px 20px #5100FF;
     border: 5px black solid;
     padding: 1rem;
+    font-family: 'Cabin', sans-serif;
 }
 
 .EventLocation {
     margin-bottom: 1rem;
     font-weight: bold;
+    font-family: 'Cabin', sans-serif;
 }
 
 .EventCard:hover {
@@ -131,6 +133,15 @@ button {
     width: 66rem;
 }
 
+.uk-modal-dialog {
+    font-family: 'Cabin', sans-serif;
+    border-radius: 8px;
+}
+
+
+.EventDetailDescription {
+    font-family: 'Cabin', sans-serif;
+}
 
 @media (min-width: 401px) and (max-width: 1280px) { 
     /* Device: Laptops, Desktops  #Screen: 1025px to 1280px */
@@ -204,6 +215,7 @@ button {
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 1;
           }
+          
           .modal-content {
             position: relative;
             background-color: white;
