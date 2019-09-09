@@ -19,9 +19,9 @@ app.get('/', function (req, res) {
 });
 
 app.get('/api/events', async (req, res) => {
-    const meetupData = await requestToMeetUpApi()
+    // const meetupData = await requestToMeetUpApi()
     const eventbriteData = await GetAllTechEventsFromEventBrite()
-    data = [...meetupData, ...eventbriteData]
+    data = [ ...eventbriteData ]
     res.json(data)
 })
 
